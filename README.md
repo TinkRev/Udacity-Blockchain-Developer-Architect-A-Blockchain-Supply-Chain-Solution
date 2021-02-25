@@ -5,10 +5,10 @@ Ethereum Dapp for Tracking Items through Supply Chain - Learn lower level compon
 
 # Write Up
 ## UML 
-See ![UML](./UML)
+See [UML](./UML)
 ## Libraries 
-Truffle - v5.1.61
-Web3 - v1.3.4
+1. Truffle - v5.1.61
+2. Web3 - v1.3.4
 ## IPFS
 Not Used
 
