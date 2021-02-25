@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fair Trade Coffee</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 style="text-align: center;">Fair Trade Coffee</h1>
+        <hr>
+        <p style="text-align: center;">Prove the authenticity of coffee using the Ethereum blockchain.</p>
+    </div>
+
+    <div>
+        <h2>Management Supply Chain Role Address</h2>
+        <div class="form-group">
+            Current Owner ID (not used)
+            <br>
+            <input type="text" id="ownerID" name="ownerID" value="0xA0C8CD4AC3618e6136115F992332b94E3dF55965" size="50"><br>
+            Farmer
+            <br>
+            <input class="input-field" type="text" id="farmerID" name="farmerID" value="0xd10C00c953B3d4De6F2AD234c7460a65dE1D2B24"><br>
+            Distributor
+            <br>
+            <input type="text" id="distributorID" name="distributorID" value="0x497a8F19E45ECC3559e4018AaC0B85BA8dfA956F"><br>
+            Retailer
+            <br>
+            <input type="text" id="retailerID" name="retailerID" value="0xFec4dE14b645bF86955C10127D6149cbb26Dd666" size="50"><br>
+            Consumer
+            <br>
+            <input type="text" id="consumerID" name="consumerID" value="0x0a623BbeFFcfdF76a119Af668bdA694735352bA5" size="50"><br>
+            <div class=button-div>
+                <button class="btn-fetchOne" id="button" type="button" data-id="11">Add role user</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="ftc-harvest">
+        <div class=form-break></div>
+        <h2>Farm Details</h2>
+        <div class="form-group">
+            Farmer ID
+            <br>
+            <input type="text" id="originFarmerID" name="originFarmerID" value="0xd10C00c953B3d4De6F2AD234c7460a65dE1D2B24"
+                size="50"><br>
+            Farm Name
+            <br>
+            <input type="text" id="originFarmName" name="originFarmName" value="John Doe"><br>
+            Farm Information
+            <br>
+            <input type="text" id="originFarmInformation" name="originFarmInformation" value="Yarra Valley"><br>
+            Farm Latitude
+            <br>
+            <input type="text" id="originFarmLatitude" name="originFarmLatitude" value="-38.239770"><br>
+            Farm Longitude
+            <br>
+            <input type="text" id="originFarmLongitude" name="originFarmLongitude" value="144.341490"><br>
+            <br>
+            <button class="btn-harvest" id="button" type="button" data-id="1">Harvest</button>
+            <button class="btn-process" id="button" type="button" data-id="2">Process</button>
+            <button class="btn-pack" id="button" type="button" data-id="3">Pack</button>
+            <button class="btn-forsale" id="button" type="button" data-id="4">ForSale</button>
+        </div>
+        <div class=form-break></div>
+        <h2>Product Details</h2>
+        <div class="form-group">
+            Product Notes
+            <br>
+            <input type="text" id="productNotes" name="productNotes" value="Best beans for Espresso" size="60"><br>
+            Product Price
+            <br>
+            <input type="number" id="productPrice" name="productPrice" value=1>ETH<br>
+            <button class="btn-buy" id="button" type="button" data-id="5">Buy</button>
+            <button class="btn-ship" id="button" type="button" data-id="6">Ship</button>
+            <button class="btn-receive" id="button" type="button" data-id="7">Receive</button>
+            <button class="btn-purchase" id="button" type="button" data-id="8">Purchase</button>
+        </div>
+        <div class=form-break></div>
+        <h2>Product Overview</h2>
+        <div class="form-group">
+            SKU
+            <br>
+            <input class="input-field" type="number" id="sku" name="sku" value=1><br>
+            UPC
+            <br>
+            <input type="number" id="upc" name="upc" value=1><br>
+            Current Owner ID
+            <br>
+            <input type="text" id="ownerIDShow" name="ownerIDShow" size="50" disabled><br>
+            Farmer ID
+            <br>
+            <input type="text" id="originFarmerIDShow" name="originFarmerIDShow" size="50" disabled><br>
+            Farm Name
+            <br>
+            <input type="text" id="originFarmNameShow" name="originFarmNameShow" disabled><br>
+            Farm Information
+            <br>
+            <input type="text" id="originFarmInformationShow" name="originFarmInformationShow" disabled><br>
+            Farm Latitude
+            <br>
+            <input type="text" id="originFarmLatitudeShow" name="originFarmLatitudeShow" disabled><br>
+            Farm Longitude
+            <br>
+            <input type="text" id="originFarmLongitudeShow" name="originFarmLongitudeShow" disabled><br>
+            Product Id
+            <br>
+            <input type="text" id="productIdShow" name="productIdShow" disabled><br>
+            Product Notes
+            <br>
+            <input type="text" id="productNotesShow" name="productNotesShow" size="60" disabled><br>
+            Product Price
+            <br>
+            <input type="number" id="productPriceShow" name="productPriceShow" disabled>ETH<br>
+            Current State
+            <br>
+            <input class="text" type="text" id="itemStateShow" name="itemStateShow" disabled><br>
+            Distributor
+            <br>
+            <input type="text" id="distributorIDShow" name="distributorIDShow" size="50" disabled><br>
+            Retailer
+            <br>
+            <input type="text" id="retailerIDShow" name="retailerIDShow" size="50" disabled><br>
+            Consumer
+            <br>
+            <input type="text" id="consumerIDShow" name="consumerIDShow" size="50" disabled><br>
+            
+            <div class=button-div>
+                <button class="btn-fetchOne" id="button" type="button" data-id="9">Fetch Data 1</button>
+                <button class="btn-fetchTwo" id="button" type="button" data-id="10">Fetch Data 2</button>
+            </div>
+        </div>
+        <hr>
+    </div>
+
+    <h2>Transaction History<span id="ftc-history"></span></h2>
+    <div>
+        <ul id="ftc-events">
+            <!-- Events will appear here from app.js -->
+        </ul>
+        <br>
+        <hr>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/web3.min.js"></script>
+    <script src="js/truffle-contract.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
